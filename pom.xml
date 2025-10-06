@@ -41,17 +41,25 @@
          <artifactId>datafaker</artifactId>
          <version>${datafaker.version}</version>
       </dependency>
+
+      <!-- Code from 2020 - has few CVEs -->
+      <!-- &lt;!&ndash; https://mvnrepository.com/artifact/org.jeasy/easy-random-core &ndash;&gt;-->
+      <!-- <dependency>-->
+      <!--    <groupId>org.jeasy</groupId>-->
+      <!--    <artifactId>easy-random-core</artifactId>-->
+      <!--    <version>5.0.0</version>-->
+      <!--    <scope>test</scope>-->
+      <!-- </dependency>-->
+
+
+      <!-- Code from 2025 - has no CVE -->
+      <!-- https://mvnrepository.com/artifact/io.github.dvgaba/easy-random-core -->
       <dependency>
-         <groupId>org.jeasy</groupId>
+         <groupId>io.github.dvgaba</groupId>
          <artifactId>easy-random-core</artifactId>
-         <version>${easyrandom.version}</version>
+         <version>7.1.1</version>
       </dependency>
-      <!--      &lt;!&ndash; https://mvnrepository.com/artifact/io.github.dvgaba/easy-random-core &ndash;&gt;-->
-      <!--      <dependency>-->
-      <!--         <groupId>io.github.dvgaba</groupId>-->
-      <!--         <artifactId>easy-random-core</artifactId>-->
-      <!--         <version>7.1.1</version>-->
-      <!--      </dependency>-->
+
       <dependency>
          <groupId>org.projectlombok</groupId>
          <artifactId>lombok</artifactId>
