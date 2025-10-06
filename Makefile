@@ -18,4 +18,4 @@ clean:
 	mvn -B clean
 
 install:
-	mvn -B install -DskipTests
+	mvn clean install -DskipTests
