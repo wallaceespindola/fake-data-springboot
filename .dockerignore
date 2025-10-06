@@ -1,0 +1,30 @@
+# Maven
+target/
+.mvn/
+**/target/
+
+# IDEs
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+
+# VCS
+.git/
+.gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / frontend (if any)
+node_modules/
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+
+# Misc
+*.log

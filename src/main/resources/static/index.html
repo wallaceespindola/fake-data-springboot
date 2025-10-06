@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>Fake Data API Tester</title>
+    <style>body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        margin: 2rem
+    }
+
+    pre {
+        background: #f6f8fa;
+        padding: 1rem;
+        border-radius: 10px;
+        overflow: auto
+    }
+
+    .btn {
+        padding: .6rem 1rem;
+        margin-right: .5rem
+    }
+
+    input {
+        padding: .5rem;
+        width: 80px
+    }</style>
+</head>
+<body><h1>Fake Data API Tester</h1>
+<p>Try the endpoints quickly:</p><label>Count: <input id='count' min='1' type='number' value='3'></label>
+<button class='btn' onclick='callUsers()'>GET /api/users/{count} (DataFaker)</button>
+<button class='btn' onclick='callUsersEasy()'>GET /api/users/{count}?easy=true (EastRandom)</button>
+<button class='btn' onclick='callCreate()'>POST /api/users/create/{count}</button>
+<button class='btn' onclick='callCreateGet()'>GET /api/users/create/{count}</button>
+<p><a href='/swagger-ui.html' target='_blank'>Open Swagger UI</a> | <a href='/actuator/health'
+                                                                       target='_blank'>Health</a></p>
+<pre id='out'></pre>
+<script>async function callUsers() {
+    const c = document.getElementById('count').value || 1;
+    const res = await fetch(`/api/users/${c}`);
+    document.getElementById('out').textContent = JSON.stringify(await res.json(), null, 2);
+}
+
+async function callUsersEasy() {
+    const c = document.getElementById('count').value || 1;
+    const res = await fetch(`/api/users/${c}?easy=true`);
+    document.getElementById('out').textContent = JSON.stringify(await res.json(), null, 2);
+}
+
+async function callCreate() {
+    const c = document.getElementById('count').value || 1;
+    const res = await fetch(`/api/users/create/${c}`, {method: 'POST'});
+    document.getElementById('out').textContent = JSON.stringify(await res.json(), null, 2);
+}
+
+async function callCreateGet() {
+    const c = document.getElementById('count').value || 1;
+    const res = await fetch(`/api/users/create/${c}`);
+    document.getElementById('out').textContent = JSON.stringify(await res.json(), null, 2);
+}</script>
+</body>
+</html>

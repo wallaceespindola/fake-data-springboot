@@ -1,0 +1,57 @@
+{
+  "info": {
+    "name": "Fake Data API",
+    "_postman_id": "11111111-2222-3333-4444-555555555555",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "GET /api/users/{count}",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/users/3"
+      }
+    },
+    {
+      "name": "GET /api/users/{count}?easy=true",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/users/3?easy=true"
+      }
+    },
+    {
+      "name": "POST /api/users/create/{count}",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/users/create/3"
+      }
+    },
+    {
+      "name": "GET /api/users/create/{count}",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/users/create/3"
+      }
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/actuator/health"
+      }
+    },
+    {
+      "name": "Swagger UI",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/swagger-ui.html"
+      }
+    }
+  ]
+}
