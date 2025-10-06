@@ -7,7 +7,7 @@ COPY src ./src
 RUN mvn -q -e -B -DskipTests package
 
 # Runtime stage
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:25-jre
 ENV JAVA_OPTS=""
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
