@@ -8,7 +8,7 @@ RUN mvn -q -e -B -DskipTests package
 
 # Runtime stage
 FROM eclipse-temurin:21-jre
-ENV JAVA_OPTS=""
+ENV JAVA_OPTS="-Xms256m -Xmx512m"
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
