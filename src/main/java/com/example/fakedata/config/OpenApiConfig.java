@@ -22,8 +22,8 @@ public class OpenApiConfig
    {
       return new io.swagger.v3.oas.models.OpenAPI().info(
             new Info()
-                  .title("Fake Data API")
-                  .description("Demo API using Datafaker + Easy Random")
+                  .title("Fake Data Spring-Boot API")
+                  .description("Demo API using Datafaker + Easy Random over Spring-Boot")
                   .version("1.0.0")
                   .license(new License().name("Apache 2.0")
                         .url("https://www.apache.org/licenses/LICENSE-2.0.html")))

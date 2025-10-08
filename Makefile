@@ -12,7 +12,7 @@ docker:
 	docker build -t $(APP_NAME):latest .
 
 compose:
-	docker-compose up --build
+	docker compose up --build
 
 clean:
 	mvn -B clean
