@@ -78,6 +78,10 @@ make clean      # Clean build artifacts
 - **Application Info**: [http://localhost:8080/actuator/info](http://localhost:8080/actuator/info)
 - **Actuator Endpoints**: [http://localhost:8080/actuator](http://localhost:8080/actuator)
 
+![test-page.png](src/main/resources/images/test-page.png)
+
+![swagger-ui.png](src/main/resources/images/swagger-ui.png)
+
 ## API Endpoints
 
 ### Generate Users
