@@ -16,8 +16,8 @@
 
 A compact Java 21 / Spring Boot project showcasing **Datafaker** + **Easy Random** to generate fake users.
 
-Includes Swagger UI, Actuator with custom health checks, Docker with health checks, 
-GitHub Actions CI/CD, Dependabot automation, comprehensive unit tests, Postman collection, 
+Includes Swagger UI, Actuator with custom health checks, Docker with health checks,
+GitHub Actions CI/CD, Dependabot automation, comprehensive unit tests, Postman collection,
 and a static tester page.
 
 ## Features
@@ -70,10 +70,13 @@ make clean      # Clean build artifacts
 
 ### Access the Application
 
-- **Test UI**: `http://localhost:8080/`
-- **Swagger UI**: `http://localhost:8080/swagger-ui.html`
-- **OpenAPI JSON**: `http://localhost:8080/v3/api-docs`
-- **Health Check**: `http://localhost:8080/actuator/health`
+- **Test UI**: [http://localhost:8080/](http://localhost:8080/)
+- **Swagger UI**: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+- **OpenAPI JSON**: [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
+- **OpenAPI YAML**: [http://localhost:8080/v3/api-docs.yaml](http://localhost:8080/v3/api-docs.yaml)
+- **Health Check**: [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health)
+- **Application Info**: [http://localhost:8080/actuator/info](http://localhost:8080/actuator/info)
+- **Actuator Endpoints**: [http://localhost:8080/actuator](http://localhost:8080/actuator)
 
 ## API Endpoints
 
@@ -84,10 +87,12 @@ GET /api/users/generate?count=5&easy=false
 ```
 
 **Parameters:**
+
 - `count` (optional, default=10): Number of users to generate
 - `easy` (optional, default=false): Use Easy Random (true) or Datafaker (false)
 
 **Response:**
+
 ```json
 {
   "timestamp": "2025-10-06T15:30:45.123Z",
@@ -152,6 +157,7 @@ docker run --rm -p 8080:8080 --name fake-data-api fake-data-springboot:latest
 ### Docker Compose
 
 The `docker-compose.yml` includes:
+
 - Container health checks using Actuator endpoint
 - Automatic restart policy
 - JVM memory configuration
@@ -180,6 +186,7 @@ docker compose down
 The project includes three automated workflows:
 
 ### 1. CI Workflow (`.github/workflows/ci.yml`)
+
 - Triggered on push/PR to `main` and `develop` branches
 - Builds with Maven
 - Runs all tests
@@ -187,12 +194,14 @@ The project includes three automated workflows:
 - Uploads JAR artifacts (30-day retention)
 
 ### 2. Docker Build Workflow (`.github/workflows/docker.yml`)
+
 - Builds and pushes Docker images to GitHub Container Registry
 - Supports semantic versioning tags
 - Includes Docker Scout security scanning
 - Uses build caching for optimization
 
 ### 3. CodeQL Security Analysis (`.github/workflows/codeql.yml`)
+
 - Automated security vulnerability scanning
 - Runs weekly on Monday at midnight
 - Reports findings in GitHub Security tab
@@ -200,9 +209,10 @@ The project includes three automated workflows:
 ## Dependabot
 
 Automated dependency updates configured for:
+
 - **Maven dependencies**: Weekly updates (Mondays at 9 AM)
-  - Groups: Spring Boot, Testing frameworks, Lombok
-  - Ignores major version updates by default
+    - Groups: Spring Boot, Testing frameworks, Lombok
+    - Ignores major version updates by default
 - **Docker base images**: Weekly updates
 - **GitHub Actions**: Weekly updates
 
@@ -253,18 +263,17 @@ Key application properties (`application.properties`):
 ```properties
 # Server configuration
 server.port=8080
-
 # Actuator endpoints
 management.endpoints.web.exposure.include=health,info
 management.endpoint.health.show-details=always
-
 # Application info
 spring.application.name=fake-data-springboot
 ```
 
 ## Notes
 
-- Health endpoint exposes details with `management.endpoint.health.show-details=always` and adds a `timestamp` via a custom `HealthIndicator`
+- Health endpoint exposes details with `management.endpoint.health.show-details=always` and adds a `timestamp` via a
+  custom `HealthIndicator`
 - The application uses Lombok annotations to reduce boilerplate code
 - Docker Compose includes health checks and restart policies for production use
 - GitHub Actions workflows provide full CI/CD automation
