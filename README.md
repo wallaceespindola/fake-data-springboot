@@ -1,8 +1,7 @@
-![Java](https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_168609.png)
+![spring-logo.png](src/main/resources/images/spring-logo.png)
 
 # Fake Data API - Spring Boot Demo
 
-![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-orange)
 ![Java](https://img.shields.io/badge/Built_with-Java21-blue)
 ![Junit5](https://img.shields.io/badge/Tested_with-Junit5-teal)
 ![Spring](https://img.shields.io/badge/Structured_by-SpringBoot-lemon)
@@ -10,6 +9,7 @@
 ![Swagger](https://img.shields.io/badge/Docs_by-Swagger-yellow)
 ![OpenAPI](https://img.shields.io/badge/Specs_by-OpenAPI-purple)
 ![Docker](https://img.shields.io/badge/Containerized_with-Docker-blue)
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-orange)
 [![CI](https://github.com/wallaceespindola/fake-data-springboot/actions/workflows/ci.yml/badge.svg)](https://github.com/wallaceespindola/fake-data-springboot/actions/workflows/ci.yml)
 
 ## Introduction
