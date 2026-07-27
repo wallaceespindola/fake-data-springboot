@@ -126,9 +126,10 @@ make test
 
 ### Test Files
 
-1. **ApplicationTests.java** - Spring integration tests for the controller
+1. **UserControllerTests.java** - Spring integration tests for the controller
 2. **DataGenServiceTest.java** - Spring-based service tests (15 test cases)
 3. **DataGenServiceUnitTest.java** - Fast non-Spring unit tests (15 test cases)
+4. **DataFakerLocaleTest.java** - Locale handling tests for Datafaker
 
 ### Test Coverage
 
@@ -248,7 +249,9 @@ fake-data-springboot/
 │   │           └── index.html  # Test UI
 │   └── test/
 │       └── java/.../fakedata/
-│           ├── ApplicationTests.java
+│           ├── DataFakerLocaleTest.java
+│           ├── controller/
+│           │   └── UserControllerTests.java
 │           └── service/
 │               ├── DataGenServiceTest.java
 │               └── DataGenServiceUnitTest.java
