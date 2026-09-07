@@ -19,7 +19,7 @@
       <springdoc.version>2.9.0</springdoc.version>
       <datafaker.version>2.7.0</datafaker.version>
       <easyrandom.version>7.1.1</easyrandom.version>
-      <lombok.version>1.18.46</lombok.version>
+      <lombok.version>1.18.48</lombok.version>
    </properties>
 
    <dependencies>
