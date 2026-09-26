@@ -12,6 +12,24 @@
 ![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-orange)
 [![CI](https://github.com/wallaceespindola/fake-data-springboot/actions/workflows/ci.yml/badge.svg)](https://github.com/wallaceespindola/fake-data-springboot/actions/workflows/ci.yml)
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Quick Start](#quick-start)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+- [Docker](#docker)
+- [GitHub Actions](#github-actions)
+- [Dependabot](#dependabot)
+- [Project Structure](#project-structure)
+- [Configuration](#configuration)
+- [Notes](#notes)
+- [Contributing](#contributing)
+- [Author](#author)
+- [License](#license)
+
 ## Introduction
 
 A compact Java 21 / Spring Boot project showcasing **Datafaker** + **Easy Random** to generate fake users.
